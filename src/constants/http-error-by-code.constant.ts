@@ -10,11 +10,14 @@ import {
 	GoneException,
 	ImATeapotException,
 	InternalServerErrorException,
+	LengthRequiredException,
 	MethodNotAllowedException,
 	NotAcceptableException,
 	NotFoundException,
 	NotImplementedException,
+	PaymentRequiredException,
 	PreconditionFailedException,
+	ProxyAuthenticationRequiredException,
 	RequestTimeoutException,
 	RequestTooLongException,
 	ServiceUnavailableException,
@@ -36,10 +39,13 @@ export type ErrorHttpStatusCode =
 	| HttpStatus.GONE
 	| HttpStatus.IM_A_TEAPOT
 	| HttpStatus.INTERNAL_SERVER_ERROR
+	| HttpStatus.LENGTH_REQUIRED
 	| HttpStatus.METHOD_NOT_ALLOWED
 	| HttpStatus.NOT_ACCEPTABLE
 	| HttpStatus.NOT_FOUND
 	| HttpStatus.NOT_IMPLEMENTED
+	| HttpStatus.PAYMENT_REQUIRED
+	| HttpStatus.PROXY_AUTHENTICATION_REQUIRED
 	| HttpStatus.REQUEST_TOO_LONG
 	| HttpStatus.PRECONDITION_FAILED
 	| HttpStatus.REQUEST_TIMEOUT
@@ -71,4 +77,7 @@ export const HttpErrorByCode: Record<ErrorHttpStatusCode, Type<unknown>> = {
 	[HttpStatus.UNAUTHORIZED]: UnauthorizedException,
 	[HttpStatus.UNPROCESSABLE_ENTITY]: UnprocessableEntityException,
 	[HttpStatus.UNSUPPORTED_MEDIA_TYPE]: UnsupportedMediaTypeException,
+	[HttpStatus.PAYMENT_REQUIRED]: PaymentRequiredException,
+	[HttpStatus.PROXY_AUTHENTICATION_REQUIRED]: ProxyAuthenticationRequiredException,
+	[HttpStatus.LENGTH_REQUIRED]: LengthRequiredException,
 };
