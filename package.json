@@ -19,7 +19,8 @@
 		"registry": "https://registry.npmjs.org"
 	},
 	"devDependencies": {
-		"@types/bun": "latest"
+		"@types/bun": "latest",
+		"tsc-alias": "^1.8.11"
 	},
 	"peerDependencies": {
 		"typescript": "^5"
@@ -28,6 +29,6 @@
 	"scripts": {
 		"clean": "rm -rf dist",
 		"build": "bun run clean && bun build ./src/index.ts --outdir=dist --target=node --minify && bun run build:types",
-		"build:types": "tsc --emitDeclarationOnly --declaration --outDir dist"
+		"build:types": "tsc --emitDeclarationOnly --declaration --outDir dist && tsc-alias"
 	}
 }
