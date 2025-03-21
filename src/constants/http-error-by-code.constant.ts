@@ -1,3 +1,4 @@
+// Source: https://github.com/nestjs/nest/blob/master/packages/common/utils/http-error-by-code.util.ts
 import { HttpStatus } from '../enums'
 import type { Type } from '../interfaces'
 

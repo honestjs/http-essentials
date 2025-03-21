@@ -1,3 +1,4 @@
+// Source https://github.com/prettymuchbryce/http-status-codes/blob/master/src/utils.ts
 import { HttpPhrase, HttpStatus } from '../enums'
 
 export const httpPhraseByStatus: Record<HttpStatus, HttpPhrase> = {
