@@ -1,5 +1,5 @@
-import { HttpStatus } from '@/enums';
-import type { Type } from '@/interfaces';
+import { HttpStatus } from '../enums'
+import type { Type } from '../interfaces'
 
 import {
 	BadGatewayException,
@@ -24,8 +24,7 @@ import {
 	UnauthorizedException,
 	UnprocessableEntityException,
 	UnsupportedMediaTypeException,
-} from '@/exceptions';
-
+} from '../exceptions'
 
 /**
  * Union type of all error HTTP status codes
@@ -52,7 +51,7 @@ export type ErrorHttpStatusCode =
 	| HttpStatus.SERVICE_UNAVAILABLE
 	| HttpStatus.UNAUTHORIZED
 	| HttpStatus.UNPROCESSABLE_ENTITY
-	| HttpStatus.UNSUPPORTED_MEDIA_TYPE;
+	| HttpStatus.UNSUPPORTED_MEDIA_TYPE
 
 /**
  * Mapping of HTTP status codes to their corresponding exception classes
@@ -80,4 +79,4 @@ export const HttpErrorByCode: Record<ErrorHttpStatusCode, Type<unknown>> = {
 	[HttpStatus.PAYMENT_REQUIRED]: PaymentRequiredException,
 	[HttpStatus.PROXY_AUTHENTICATION_REQUIRED]: ProxyAuthenticationRequiredException,
 	[HttpStatus.LENGTH_REQUIRED]: LengthRequiredException,
-};
+}

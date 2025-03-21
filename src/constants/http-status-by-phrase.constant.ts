@@ -1,4 +1,4 @@
-import { HttpPhrase, HttpStatus } from '@/enums';
+import { HttpPhrase, HttpStatus } from '../enums'
 
 export const httpStatusByPhrase: Record<HttpPhrase, HttpStatus> = {
 	[HttpPhrase.ACCEPTED]: HttpStatus.ACCEPTED,
@@ -59,4 +59,4 @@ export const httpStatusByPhrase: Record<HttpPhrase, HttpStatus> = {
 	[HttpPhrase.UNSUPPORTED_MEDIA_TYPE]: HttpStatus.UNSUPPORTED_MEDIA_TYPE,
 	[HttpPhrase.USE_PROXY]: HttpStatus.USE_PROXY,
 	[HttpPhrase.MISDIRECTED_REQUEST]: HttpStatus.MISDIRECTED_REQUEST,
-};
+}
