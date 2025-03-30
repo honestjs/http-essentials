@@ -13,11 +13,11 @@
 
 		// Enable declaration file generation
 		"declaration": true,
-		"declarationMap": true,
+		"declarationMap": false,
 		"emitDeclarationOnly": true,
 		"outDir": "dist",
 		"rootDir": "src",
-		"sourceMap": true,
+		"sourceMap": false,
 
 		// Best practices
 		"strict": true,
