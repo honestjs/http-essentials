@@ -1,6 +1,6 @@
 {
 	"name": "http-essentials",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "HTTP statuses, phrases, and exceptions",
 	"type": "module",
 	"main": "dist/index.js",
