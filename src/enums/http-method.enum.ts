@@ -88,8 +88,3 @@ export enum HttpMethod {
 	// HTTP/2 specific (RFC 7540)
 	PRI = 'pri',
 }
-
-/**
- * Type for HTTP methods, allowing both enum values and custom string methods
- */
-export type HttpMethodType = HttpMethod | string
