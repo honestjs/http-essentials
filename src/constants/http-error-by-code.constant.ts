@@ -1,6 +1,5 @@
 // Source: https://github.com/nestjs/nest/blob/master/packages/common/utils/http-error-by-code.util.ts
 import { HttpStatus } from '../enums'
-import type { Type } from '../interfaces'
 
 import {
 	BadGatewayException,
@@ -57,7 +56,7 @@ export type ErrorHttpStatusCode =
 /**
  * Mapping of HTTP status codes to their corresponding exception classes
  */
-export const HttpErrorByCode: Record<ErrorHttpStatusCode, Type<unknown>> = {
+export const HttpErrorByCode: Record<ErrorHttpStatusCode, new (...args: any[]) => unknown> = {
 	[HttpStatus.BAD_GATEWAY]: BadGatewayException,
 	[HttpStatus.BAD_REQUEST]: BadRequestException,
 	[HttpStatus.CONFLICT]: ConflictException,
