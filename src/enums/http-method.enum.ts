@@ -73,10 +73,10 @@ export enum HttpMethod {
 	QUERY = 'query',
 
 	// Miscellaneous and CDN-specific methods
-	PURGE = 'purge', // Used by some CDNs like Fastly
-	LINK = 'link', // Used in various contexts
-	UNLINK = 'unlink', // Used in various contexts
-	MERGE = 'merge', // Used in various contexts
+	PURGE = 'purge',
+	LINK = 'link',
+	UNLINK = 'unlink',
+	MERGE = 'merge',
 
 	// Methods used in various implementations
 	MKACTIVITY = 'mkactivity',
