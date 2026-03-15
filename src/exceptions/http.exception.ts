@@ -11,6 +11,8 @@ export class HttpException extends Error {
 	) {
 		super(message, { cause })
 		this.name = this.constructor.name
-		Error.captureStackTrace(this, this.constructor)
+		if (typeof Error.captureStackTrace === 'function') {
+			Error.captureStackTrace(this, this.constructor)
+		}
 	}
 }

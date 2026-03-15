@@ -17,7 +17,7 @@ export * from './precondition-failed.exception';
 export * from './proxy-authentication-required.exception';
 export * from './request-timeout.exception';
 export * from './request-too-long.exception';
-export * from './service-unaviable.exception';
+export * from './service-unavailable.exception';
 export * from './unauthorized.exception';
 export * from './unprocessable-entity.exception';
 export * from './unsupported-media-type.exception';
